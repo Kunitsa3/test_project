@@ -1,0 +1,87 @@
+@mixin button {
+  padding: 9.5px 20px;
+  text-transform: uppercase;
+  color: $white;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 140%;
+  letter-spacing: 0.4px;
+  border-radius: 12px;
+  flex-shrink: 0;
+  cursor: pointer;
+  border: none;
+  border: 2px solid $primary;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+@mixin filled-button {
+  @include button;
+
+  background: $primary;
+}
+
+
+@mixin default-button {
+  @include button;
+
+  background: transparent;
+}
+
+@mixin title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 130%;
+  color: $mainLight;
+}
+
+@mixin text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: $secondaryDark;
+}
+
+@mixin secondary-title {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 140%;
+  color: $mainLight;
+}
+
+@mixin secondary-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: $secondaryDark;
+}
+
+@mixin column-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 40px;
+  align-items: center;
+}
+
+@mixin icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  min-width: 32px;
+  height: 32px;
+}
+
+@mixin text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
