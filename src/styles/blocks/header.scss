@@ -17,16 +17,21 @@
     display: none;
   }
 
+  &__logo {
+    margin-right: 53px;
+  }
+
   &__items-wrapper {
     display: flex;
     align-items: center;
-    gap: 32px;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 412px;
   }
 
   &__item {
     display: flex;
     align-items: center;
-    gap: 4px;
   }
 
   &__item-text {
@@ -34,52 +39,28 @@
     font-size: 14px;
     line-height: 17px;
     cursor: pointer;
+    margin-right: 4px;
   }
 
   &__buttons-wrapper {
     display: flex;
     align-items: center;
-    gap: 12px;
+    margin-left: 52px;
+    flex-shrink: 0
   }
 
   &__login-button {
     @include default-button;
+    margin-right: 12px;
+  }
+
+  &__login-button_black {
+    color: $mainLight;
   }
 
   &__start-button {
     @include filled-button;
   }
-}
-
-.description {
-  @include flex-center;
-
-  flex-direction: column;
-  gap: 40px;
-  padding: 98px 212px;
-
-  &__image {
-    width: 130px;
-  }
-
-  &__text {
-    font-weight: 700;
-    font-size: 56px;
-    line-height: 120%;
-  }
-
-  &__secondary-text {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 140%;
-    max-width: 920px;
-    text-align: center;
-  }
-}
-
-.wrapper {
-  background: radial-gradient(100% 100% at 50% 100%, rgba(0, 163, 255, 0.6) 0%, rgba(5, 30, 67, 0) 100%), #051E43;
-  color: $white;
 }
 
 @include respond-to(mobile) {
@@ -98,16 +79,6 @@
       display: block;
     }
   }
-
-  .description {
-    padding: 55px 26px 60px 22px;
-
-    &__text {
-      font-size: 40px;
-      line-height: 130%;
-      text-align: center;
-    }
-  }
 }
 
 @include respond-to(tablet) {
@@ -121,20 +92,6 @@
 
     &__burger {
       display: block;
-    }
-  }
-
-  .description {
-    padding: 74px 40px;
-
-    &__text {
-      font-size: 48px;
-      line-height: 130%;
-      text-align: center;
-    }
-
-    &__secondary-text {
-      max-width: none;
     }
   }
 }

@@ -1,0 +1,110 @@
+.company-value {
+  @include flex-center;
+  background: $secondaryLight;
+
+  &__content {
+    @include column-section;
+    max-width: 1400px;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__advantages-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__primary-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__primary-title {
+    @include title;
+  }
+
+  &__primary-text {
+    @include text;
+  }
+
+  &__advantage {
+    display: flex;
+    gap: 12px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__title {
+    @include secondary-title;
+  }
+
+  &__text {
+    @include secondary-text;
+  }
+
+  &__icon_blue {
+    @include icon;
+    background-color: $blue;
+  }
+
+  &__icon_green {
+    @include icon;
+    background-color: $green;
+  }
+
+  &__icon_pink {
+    @include icon;
+    background-color: $pink;
+  }
+
+  &__icon_yellow {
+    @include icon;
+    background-color: $yellow;
+  }
+
+  &__link {
+    color: $primaryLight;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+@include respond-to(mobile) {
+  .company-value {
+    &__content {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 20px;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    &__info {
+      text-align: left;
+    }
+  }
+}
+
+@include respond-to(tablet) {
+  .company-value {
+    &__content {
+      gap: 20px;
+    }
+  }
+}

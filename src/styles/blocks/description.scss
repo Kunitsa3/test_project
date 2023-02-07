@@ -1,0 +1,58 @@
+.description {
+  @include flex-center;
+
+  flex-direction: column;
+  gap: 40px;
+  padding: 98px 212px;
+
+  &__image {
+    width: 130px;
+  }
+
+  &__text {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 120%;
+  }
+
+  &__secondary-text {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+    max-width: 920px;
+    text-align: center;
+  }
+}
+
+.wrapper {
+  background: radial-gradient(100% 100% at 50% 100%, rgba(0, 163, 255, 0.6) 0%, rgba(5, 30, 67, 0) 100%), #051E43;
+  color: $white;
+}
+
+@include respond-to(mobile) {
+  .description {
+    padding: 55px 26px 60px 22px;
+
+    &__text {
+      font-size: 40px;
+      line-height: 130%;
+      text-align: center;
+    }
+  }
+}
+
+@include respond-to(tablet) {
+  .description {
+    padding: 74px 40px;
+
+    &__text {
+      font-size: 48px;
+      line-height: 130%;
+      text-align: center;
+    }
+
+    &__secondary-text {
+      max-width: none;
+    }
+  }
+}

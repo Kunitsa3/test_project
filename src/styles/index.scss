@@ -2,9 +2,17 @@
 @import "common/breakpoints.scss";
 @import "common/mixins.scss";
 @import "common/colors.scss";
-@import "header.scss";
+@import "blocks/header.scss";
+@import "blocks/footer.scss";
+@import "blocks/companyValue.scss";
+@import "blocks/advantage.scss";
+@import "blocks/affiliate.scss";
+@import "blocks/blog.scss";
+@import "blocks/clients.scss";
+@import "blocks/description.scss";
+@import "blocks/integration.scss";
+@import "blocks/startTapfiliate.scss";
 @import "main.scss";
-@import "footer.scss";
 
 body {
   font-family: 'Montserrat', sans-serif;

@@ -14,4 +14,10 @@ $break-note: 1920px;
       @content;
     }
   }
+
+  @else if $media==desktop {
+    @media only screen and (min-width: $break-note) {
+      @content;
+    }
+  }
 }

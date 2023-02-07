@@ -1,0 +1,33 @@
+.advantage {
+  @include columns-with-gap;
+  @include container;
+
+  &__title {
+    @include title;
+
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    @include text;
+  }
+
+  &__image {
+    width: 100%
+  }
+}
+
+@include respond-to(mobile) {
+  .advantage {
+    &__info {
+      @include flex-center;
+      flex-direction: column;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    &.image-text-rotate {
+      flex-direction: column-reverse;
+    }
+  }
+}

@@ -1,0 +1,167 @@
+.affiliate-background {
+  @include flex-center;
+
+  background: $purple;
+  color: $mainLight;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.affiliate-wrapper {
+  padding: 100px 52px;
+}
+
+.affiliate {
+  @include container;
+  @include columns-with-gap;
+
+  width: 100%;
+
+  &__title {
+    @include h1;
+    margin-bottom: 35px;
+  }
+
+  &__text {
+    @include paragraph;
+    margin-bottom: 60px;
+    color: $mainLight;
+    opacity: 0.8;
+  }
+
+  &__buttons {
+    display: flex;
+    margin-bottom: 56px;
+  }
+
+  &__try-button {
+    @include filled-button;
+
+    margin-right: 12px;
+    font-size: 16px;
+    padding: 19px 38px;
+  }
+
+  &__demo-button {
+    @include default-button;
+
+    color: $mainLight;
+    font-size: 16px;
+    padding: 19px 38px;
+  }
+
+  &__capterra-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__capterra {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 9.91px;
+    border-right: 1px solid rgba(49, 93, 139, 0.4);
+  }
+
+  &__stars {
+    margin-top: 2px;
+    max-width: 58px;
+  }
+
+  &__mark {
+    font-weight: 700;
+    font-size: 26.4348px;
+    line-height: 140%;
+    margin-left: 9.91px;
+  }
+
+  &__image {
+    width: 100%;
+  }
+}
+
+@include respond-to(mobile) {
+  .affiliate-wrapper {
+    padding: 60px 24px;
+    position: relative;
+  }
+
+  .affiliate {
+    &__title {
+      font-size: 36px;
+      line-height: 130%;
+      text-align: center;
+    }
+
+    &__text {
+      text-align: center;
+      max-width: 474px;
+      margin: 0 auto 60px;
+    }
+
+    &__buttons {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &__try-button {
+      @include filled-button;
+
+      margin-right: 0;
+      margin-bottom: 12px;
+      font-size: 16px;
+      padding: 19px 38px;
+    }
+
+    &__capterra-wrapper {
+      position: absolute;
+      bottom: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &__image {
+      margin-bottom: 98px;
+    }
+  }
+}
+
+@include respond-to(tablet) {
+  .affiliate-wrapper {
+    padding: 80px 40px;
+    position: relative;
+  }
+
+  .affiliate {
+    &__title {
+      font-size: 40px;
+      line-height: 130%;
+    }
+
+    &__text {
+      margin-bottom: 54px;
+    }
+
+    &__buttons {
+      flex-wrap: wrap;
+      margin-left: -6px;
+      margin-bottom: 54px;
+
+      &>* {
+        margin: 6px;
+      }
+    }
+
+    &__try-button {
+      max-height: 60px;
+    }
+
+    &__demo-button {
+      max-height: 60px;
+    }
+  }
+}
