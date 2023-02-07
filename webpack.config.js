@@ -39,8 +39,16 @@ const baseConfig = {
   plugins: [
     new MiniCssExtractPlugin({ filename: '[name].[contenthash].css' }),
     new HtmlWebpackPlugin({
-      template: './src/index.html',
-      filename: 'index.html',
+      template: './src/about-us.html',
+      filename: 'about-us.html',
+      chunks: ['index'],
+      inject: 'body',
+      minify: false,
+      scriptLoading: 'blocking',
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/tracking.html',
+      filename: 'tracking.html',
       chunks: ['index'],
       inject: 'body',
       minify: false,

@@ -44,6 +44,13 @@
   color: $secondaryDark;
 }
 
+@mixin paragraph {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  color: $secondaryDark;
+}
+
 @mixin secondary-title {
   font-weight: 600;
   font-size: 14px;
@@ -84,4 +91,50 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@mixin container {
+  max-width: 1400px;
+}
+
+@mixin columns-with-gap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 40px;
+  align-items: center;
+
+  @include respond-to(mobile) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include respond-to(tablet) {
+    column-gap: 20px;
+  }
+}
+
+@mixin h1 {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 120%;
+}
+
+@mixin h2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 130%;
+}
+
+@mixin content-wrapper {
+  @include flex-center;
+
+  padding: 120px 52px;
+
+  @include respond-to(mobile) {
+    padding: 80px 24px;
+  }
+
+  @include respond-to(tablet) {
+    padding: 100px 40px;
+  }
 }

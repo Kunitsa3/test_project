@@ -1,0 +1,61 @@
+.clients-wrapper {
+  @include flex-center;
+  padding: 140px 52px 102px;
+}
+
+.clients {
+  @include container;
+  @include flex-center;
+
+  flex-direction: column;
+
+  &__text {
+    @include secondary-title;
+
+    margin-bottom: 20px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+  }
+}
+
+@include respond-to(desktop) {
+  .clients-wrapper {
+    padding: 120px 52px;
+  }
+}
+
+@include respond-to(tablet) {
+  .clients-wrapper {
+    padding: 100px 40px 100px;
+  }
+
+  .clients {
+    &__images-wrapper {
+      display: flex;
+      max-width: 688px;
+    }
+
+    &__image {
+      max-width: calc(100% / 6)
+    }
+  }
+}
+
+@include respond-to(mobile) {
+  .clients-wrapper {
+    padding: 83px 24px;
+  }
+
+  .clients {
+    &__images-wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 470px;
+    }
+
+    &__text {
+      text-align: center;
+    }
+  }
+}
