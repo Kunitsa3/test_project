@@ -1,0 +1,59 @@
+.office {
+  @include container;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+  align-items: center;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    @include h2;
+    margin-bottom: 20px;
+    color: $mainLight;
+  }
+
+  &__text {
+    @include paragraph;
+    color: $secondaryDark;
+  }
+
+  &__image {
+    width: 100%;
+  }
+}
+
+@include respond-to(tablet) {
+  .office {
+    column-gap: 20px;
+
+    &__text {
+      font-size: 18px;
+    }
+  }
+}
+
+@include respond-to(mobile) {
+  .office {
+    display: flex;
+    flex-direction: column-reverse;
+
+    &__title {
+      font-size: 32px;
+      text-align: center;
+    }
+
+    &__text {
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    &__info {
+      padding: 0 24px;
+    }
+  }
+}
