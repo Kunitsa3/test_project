@@ -47,6 +47,14 @@ const baseConfig = {
       scriptLoading: 'blocking',
     }),
     new HtmlWebpackPlugin({
+      template: './src/contacts.html',
+      filename: 'contacts.html',
+      chunks: ['index'],
+      inject: 'body',
+      minify: false,
+      scriptLoading: 'blocking',
+    }),
+    new HtmlWebpackPlugin({
       template: './src/tracking.html',
       filename: 'tracking.html',
       chunks: ['index'],
