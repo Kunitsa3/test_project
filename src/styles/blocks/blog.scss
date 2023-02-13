@@ -18,7 +18,7 @@
   &__tab {
     @include flex-center;
 
-    border: 2px solid $lightBlue;
+    border: 2px solid $darkBlue;
     border-radius: 16px;
     cursor: pointer;
     padding: 18px 10px;
@@ -169,7 +169,7 @@
     }
 
     &__tabs-image {
-      width: unset;
+      width: 80px;
     }
 
     &__tab {

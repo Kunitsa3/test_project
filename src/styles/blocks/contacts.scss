@@ -40,7 +40,7 @@
   }
 
   &__item {
-    background: #F2F7FF;
+    background: $lightBlue;
     border-radius: 16px;
     padding: 40px;
     display: flex;
@@ -68,13 +68,13 @@
     font-size: 20px;
     line-height: 140%;
     text-align: right;
-    color: #0085FF;
+    color: $primary;
     margin-top: 92px;
     cursor: pointer;
   }
 
   &__item-link {
-    color: #2B92FF;
+    color: $primaryLight;
     text-decoration: underline;
     font-weight: 400;
     font-size: 20px;

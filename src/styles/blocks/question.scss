@@ -1,0 +1,110 @@
+.question {
+  @include container;
+  @include flex-center;
+
+  width: 100%;
+  max-width: 920px;
+  flex-direction: column;
+  padding: 120px 160px;
+
+  &__title {
+    @include h2;
+
+    color: $mainLight;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    @include paragraph;
+
+    color: $secondaryDark;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
+  &__link {
+    @include paragraph;
+
+    color: $primaryLight;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &__item {
+    padding: 28px 92px 28px 36px;
+    background: $lightBlue;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    max-width: 920px;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &_active {
+      padding: 24px 92px 24px 36px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 24px;
+    right: 36px;
+  }
+
+  &__item-title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    color: $mainLight;
+  }
+
+  &__item-text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: $secondaryDark;
+    margin-top: 20px;
+    max-width: 792px;
+  }
+}
+
+@include respond-to(tablet) {
+  .question {
+    padding: 100px 0;
+
+    &__title {
+      font-size: 36px;
+      text-align: center;
+    }
+
+    &__item {
+      max-width: none;
+    }
+  }
+}
+
+@include respond-to(mobile) {
+  .question {
+    padding: 80px 0;
+
+    &__title {
+      font-size: 32px;
+      text-align: center;
+    }
+
+    &__item {
+      max-width: none;
+    }
+  }
+}

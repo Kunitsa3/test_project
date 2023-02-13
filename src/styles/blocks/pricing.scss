@@ -1,0 +1,223 @@
+.pricing {
+  @include container;
+  @include flex-center;
+
+  flex-direction: column;
+  width: 100%;
+
+  &__title {
+    @include h2;
+
+    color: $mainLight;
+    margin: 0 0 80px;
+  }
+
+  &__info {
+    cursor: pointer;
+    margin-left: 10px;
+    min-width: 24px;
+
+    &:hover {
+      opacity: 0.65;
+    }
+  }
+
+  &__plans {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    color: $mainLight;
+    width: 100%;
+  }
+
+  &__header {
+    background: $lightGreen;
+  }
+
+  &__header-cell {
+    padding: 20px;
+    width: 17.39%;
+
+    &:first-child {
+      text-align: left;
+      width: 32.6%;
+    }
+
+    &:last-child {
+      width: 15.23%;
+      padding: 0 0 0 20px;
+    }
+  }
+
+  &__line {
+
+    &:nth-child(even) {
+      background: $secondaryLight;
+      border-radius: 12px;
+    }
+
+    &:last-child {
+      background-color: $white;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 130%;
+    }
+
+    &_last {
+      .pricing__line-cell:first-child {
+        padding: 25px 20px;
+      }
+    }
+  }
+
+  &__line-cell {
+    padding: 20px 0 20px 10px;
+    justify-content: flex-start;
+
+    &:not(:first-child) {
+      text-align: center;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 140%;
+    }
+
+    &:first-child {
+      display: flex;
+      align-items: center;
+      max-width: 91%;
+    }
+  }
+
+  &__action-button {
+    @include filled-button;
+
+    padding: 14px 11px;
+  }
+}
+
+@include respond-to(desktop) {
+  .pricing {
+    &__header-cell {
+      width: 17.14%;
+
+      &:first-child {
+        width: 32.85%;
+      }
+
+      &:last-child {
+        width: 15.71%;
+      }
+    }
+
+    &__action-button {
+      @include filled-button;
+      width: 100%;
+      max-width: 200px;
+    }
+  }
+}
+
+@include respond-to(tablet) {
+  .pricing {
+
+    &__title {
+      font-size: 36px;
+      margin: 100px 0 64px;
+    }
+
+    &__header-cell {
+      font-size: 16px;
+      width: 17.15%;
+
+      &:first-child {
+        width: 31.39%;
+      }
+
+      &:last-child {
+        width: 17.16%;
+      }
+    }
+
+    &__line-cell {
+      padding: 20px 0 20px 10px;
+      justify-content: flex-start;
+
+      &:first-child {
+        max-width: 85%;
+      }
+    }
+
+    &__action-button {
+      padding: 14px 3px;
+      width: 100%;
+    }
+  }
+}
+
+@include respond-to(mobile) {
+  .pricing {
+
+    &__title {
+      font-size: 32px;
+      margin: 80px 0 46px;
+    }
+
+    &__plans {
+      line-height: 65%;
+    }
+
+    &__icon {
+      width: 7.6px;
+      height: 7.6px;
+    }
+
+    &__info {
+      width: 11.41px;
+      height: 11.41px;
+    }
+
+    &__header-cell {
+      font-size: 7px;
+      padding: 9.51px 9.51px;
+      width: 17.15%;
+
+      &:first-child {
+        width: 34.3%;
+      }
+
+      &:last-child {
+        width: 14.25%;
+      }
+    }
+
+    &__line-cell {
+      padding: 9.51px 0 9.51px 4.75px;
+      justify-content: flex-start;
+      font-size: 9px;
+
+
+      &:first-child {
+        max-width: 85%;
+      }
+
+      &:not(:first-child) {
+        font-size: 9px;
+      }
+    }
+
+    &__line {
+      &_last {
+        .pricing__line-cell:first-child {
+          padding: 13.41px 9.51px;
+        }
+      }
+    }
+
+    &__action-button {
+      padding: 7px 0px;
+      width: 100%;
+      font-size: 5px;
+      border-radius: 5.70349px;
+    }
+  }
+}
