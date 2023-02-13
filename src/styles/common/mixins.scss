@@ -30,6 +30,18 @@
   background: transparent;
 }
 
+@mixin h1 {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 120%;
+}
+
+@mixin h2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 130%;
+}
+
 @mixin title {
   font-weight: 700;
   font-size: 32px;
@@ -111,18 +123,6 @@
   @include respond-to(tablet) {
     column-gap: 20px;
   }
-}
-
-@mixin h1 {
-  font-weight: 700;
-  font-size: 56px;
-  line-height: 120%;
-}
-
-@mixin h2 {
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 130%;
 }
 
 @mixin content-wrapper {
