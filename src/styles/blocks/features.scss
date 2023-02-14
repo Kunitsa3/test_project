@@ -1,0 +1,101 @@
+.features {
+  @include container;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    @include h2;
+
+    color: $mainLight;
+    margin-bottom: 60px;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
+    align-items: start;
+  }
+
+  &__item {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__value {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 120%;
+    margin: 40px 0 20px;
+    color: $mainLight;
+  }
+
+  &__item-title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    color: $mainLight;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+    color: $secondaryDark;
+    text-align: center;
+  }
+}
+
+@include respond-to(desktop) {
+  .features {
+    &__value {
+      font-weight: 700;
+      font-size: 64px;
+      line-height: 120%;
+      margin: 40px 0 20px;
+      color: $mainLight;
+    }
+  }
+}
+
+@include respond-to(tablet) {
+  .features {
+    &__wrapper {
+      column-gap: 20px;
+    }
+
+    &__value {
+      font-size: 40px;
+      line-height: 130%;
+      margin: 40px 0 20px;
+      color: $mainLight;
+    }
+  }
+}
+
+@include respond-to(mobile) {
+  .features {
+    &__wrapper {
+      grid-template-columns: 1fr;
+      row-gap: 20px;
+    }
+
+    &__title {
+      margin-bottom: 40px;
+      font-size: 32px;
+    }
+
+    &__value {
+      font-size: 40px;
+      line-height: 130%;
+      margin: 20px 0;
+    }
+  }
+}

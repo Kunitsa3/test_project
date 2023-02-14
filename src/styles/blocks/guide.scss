@@ -1,0 +1,89 @@
+.guide {
+  @include container;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 130%;
+    color: $mainLight;
+    margin-bottom: 80px;
+    text-align: center;
+    max-width: 660px;
+  }
+
+  &__posts-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
+    width: 100%;
+  }
+
+  &__post {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  &__image {
+    width: 100%;
+    height: 165px;
+  }
+
+  &__text {
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 130%;
+    color: $mainLight;
+  }
+}
+
+@include respond-to(desktop) {
+  .guide {
+    &__title {
+      max-width: 950px;
+    }
+
+    &__image {
+      width: 100%;
+      height: 260px;
+    }
+  }
+}
+
+@include respond-to(tablet) {
+  .guide {
+    &__title {
+      font-size: 36px;
+      max-width: 570px;
+      margin-bottom: 60px;
+    }
+
+    &__posts-wrapper {
+      column-gap: 20px;
+    }
+  }
+}
+
+@include respond-to(mobile) {
+  .guide {
+    &__title {
+      font-size: 32px;
+      margin-bottom: 37px;
+    }
+
+    &__posts-wrapper {
+      grid-template-columns: 1fr;
+      row-gap: 40px;
+    }
+
+    &__image {
+      height: auto;
+      max-height: 424px;
+    }
+  }
+}

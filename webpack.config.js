@@ -70,6 +70,14 @@ const baseConfig = {
       minify: false,
       scriptLoading: 'blocking',
     }),
+    new HtmlWebpackPlugin({
+      template: './src/affiliate-marketing.html',
+      filename: 'affiliate-marketing.html',
+      chunks: ['index'],
+      inject: 'body',
+      minify: false,
+      scriptLoading: 'blocking',
+    }),
     new CopyPlugin({
       patterns: [
         {

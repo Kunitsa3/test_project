@@ -1,5 +1,36 @@
-.pricing-container {
+.content-container {
   @include content-wrapper;
 
   flex-direction: column;
+}
+
+.blue-container {
+  @include content-wrapper;
+
+  background: $secondaryLight;
+}
+
+.container {
+  @include content-wrapper;
+}
+
+.column-container {
+  @include content-wrapper;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  @include content-wrapper;
+
+  padding-top: 0;
+
+  @include respond-to(tablet) {
+    padding-top: 0;
+  }
+
+  @include respond-to(mobile) {
+    padding-top: 0;
+  }
 }

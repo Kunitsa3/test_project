@@ -1,0 +1,148 @@
+.case {
+  @include container;
+  @include flex-center;
+
+  flex-direction: column;
+  background-color: $lightBlue;
+
+  &__title {
+    @include h2;
+
+    color: $mainLight;
+    text-align: center;
+    max-width: 762px;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    @include paragraph;
+
+    color: $secondaryDark;
+    text-align: center;
+    max-width: 762px;
+    margin-bottom: 80px;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
+  }
+
+  &__item {
+    padding: 40px;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    height: 599px;
+    position: relative;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.02), 0px 0px 40px rgba(0, 0, 0, 0.06);
+    border-radius: 16px;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__secondary-text {
+    @include paragraph;
+
+    color: $secondaryDark;
+    margin-top: 20px;
+  }
+
+  &__link {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    color: $primaryLight;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+  }
+}
+
+@include respond-to(desktop) {
+  .case {
+    &__title {
+      max-width: none;
+    }
+
+    &__text {
+      max-width: none;
+    }
+
+    &__item {
+      height: 548px;
+    }
+  }
+}
+
+@include respond-to(tablet) {
+  .case {
+    &__title {
+      font-size: 36px;
+    }
+
+    &__text {
+      margin-bottom: 60px;
+    }
+
+    &__wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 20px;
+    }
+
+    &__item {
+      flex-direction: row;
+      height: auto;
+      position: relative;
+      gap: 40px;
+    }
+
+    &__secondary-text {
+      margin-bottom: 120px;
+    }
+
+    &__image {
+      width: 261px;
+      height: 146px;
+    }
+  }
+}
+
+@include respond-to(mobile) {
+  .case {
+    &__title {
+      font-size: 32px;
+    }
+
+    &__text {
+      margin-bottom: 40px;
+    }
+
+    &__wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 20px;
+    }
+
+    &__item {
+      flex-direction: column;
+      height: auto;
+      position: relative;
+      gap: 40px;
+      max-width: 474px;
+    }
+
+    &__secondary-text {
+      margin-bottom: 120px;
+      font-size: 18px;
+    }
+
+    &__image {
+      width: 100%;
+    }
+  }
+}
