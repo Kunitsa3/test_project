@@ -1,0 +1,143 @@
+.marketing-software {
+  @include container;
+  @include flex-center;
+
+  flex-direction: column;
+  gap: 60px;
+
+  &__title {
+    @include h2;
+
+    color: $mainLight;
+    text-align: center;
+    max-width: calc(100% - 160px);
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
+    width: 100%;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    border-radius: 16px;
+    position: relative;
+
+    &_pink {
+      background-color: $lightPink;
+    }
+
+    &_blue {
+      background-color: $lightBlue;
+    }
+
+    &_green {
+      background-color: $lightGreen;
+    }
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__item-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 130%;
+    text-align: center;
+    color: $mainLight;
+    margin-top: 16px;
+  }
+
+  &__item-text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    text-align: center;
+    color: $mainLight;
+    margin: 20px 0 42px;
+  }
+
+  &__item-link {
+    @include flex-center;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+    color: $primaryLight;
+    position: absolute;
+    bottom: 40px;
+  }
+
+  &__arrow {
+    margin-left: 4px;
+  }
+
+  &__button {
+    @include filled-button;
+
+    padding: 16px 38px;
+    font-size: 16px;
+  }
+}
+
+@include respond-to(tablet) {
+  .marketing-software {
+    &__title {
+      max-width: none;
+      font-size: 36px;
+    }
+
+    &__item-title {
+      font-weight: 600;
+      font-size: 20px;
+      margin-top: 20px;
+    }
+
+    &__item-text {
+      font-size: 16px;
+    }
+
+    &__wrapper {
+      column-gap: 20px;
+    }
+  }
+}
+
+@include respond-to(mobile) {
+  .marketing-software {
+    &__title {
+      max-width: none;
+      font-size: 32px;
+    }
+
+    &__item-title {
+      font-weight: 600;
+      font-size: 20px;
+      margin-top: 22px;
+    }
+
+    &__item-text {
+      font-size: 16px;
+    }
+
+    &__wrapper {
+      grid-template-columns: 1fr;
+      row-gap: 20px;
+    }
+
+    &__button {
+      width: 100%;
+    }
+
+    &__image {
+      max-width: 360px;
+    }
+  }
+}

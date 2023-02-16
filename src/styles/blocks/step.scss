@@ -1,0 +1,128 @@
+.steps {
+  padding-bottom: 120px;
+  width: 100%;
+
+  &__title {
+    @include h2;
+
+    max-width: 1160px;
+    text-align: center;
+    margin: 0 auto 80px;
+  }
+}
+
+.step {
+  @include container;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  align-items: center;
+  column-gap: 40px;
+
+  &__image {
+    width: 100%;
+  }
+
+  &__name {
+    @include secondary-title;
+
+    text-transform: uppercase;
+    color: $secondary;
+  }
+
+  &__title {
+    @include title;
+
+    margin: 40px 0 20px;
+    color: $mainLight;
+  }
+
+  &__text {
+    @include text;
+
+    margin-bottom: 40px;
+    color: $secondaryDark;
+  }
+
+  &__details-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__details {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  &__secondary-text {
+    @include secondary-title;
+
+    color: $mainLight;
+  }
+
+  &__button {
+    @include default-button;
+
+    margin-top: 40px;
+    color: $mainLight;
+    font-size: 14px;
+    padding: 11px 24px;
+  }
+
+  &__icon {
+    @include icon;
+
+    &_blue {
+      background-color: $blue;
+    }
+
+    &_green {
+      background-color: $green;
+    }
+
+    &_pink {
+      background-color: $pink;
+    }
+  }
+}
+
+@include respond-to(tablet) {
+  .step {
+    column-gap: 20px;
+  }
+
+  .steps {
+    padding-bottom: 100px;
+  }
+}
+
+@include respond-to(mobile) {
+  .step {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &__name {
+      text-align: center;
+    }
+
+    &__title {
+      text-align: center;
+    }
+
+    &__text {
+      text-align: center;
+    }
+
+    &__button {
+      width: 100%;
+    }
+
+    &.image-text-rotate {
+      flex-direction: column-reverse;
+    }
+  }
+}
