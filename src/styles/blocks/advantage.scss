@@ -15,6 +15,10 @@
   &__image {
     width: 100%
   }
+
+  &__text_second-paragraph {
+    margin-top: 20px;
+  }
 }
 
 @include respond-to(mobile) {

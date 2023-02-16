@@ -78,6 +78,14 @@ const baseConfig = {
       minify: false,
       scriptLoading: 'blocking',
     }),
+    new HtmlWebpackPlugin({
+      template: './src/main-page.html',
+      filename: 'main-page.html',
+      chunks: ['index'],
+      inject: 'body',
+      minify: false,
+      scriptLoading: 'blocking',
+    }),
     new CopyPlugin({
       patterns: [
         {
